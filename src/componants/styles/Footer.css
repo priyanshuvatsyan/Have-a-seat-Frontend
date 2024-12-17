@@ -1,0 +1,122 @@
+.footer {
+  background-color: rgba(245, 210, 159, 0.616); /* Footer background color */
+  padding: 20px 0;
+  font-family: serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  height: auto; /* Adjust height for smaller screens */
+}
+
+.footer h1 {
+  font-size: 2rem; /* Adjust font size for better responsiveness */
+  font-family: serif;
+  text-align: center;
+}
+
+.footer input {
+  margin-top: 30px;
+  color: black;
+  background-color: transparent;
+  padding: 10px 15px; /* Adjust padding for smaller screens */
+  width: 80%; /* Responsive width */
+  border-radius: 20px;
+  border: 1px solid black; /* Add border for better visibility */
+}
+
+.footer button {
+  margin-left: 0; /* Reset margin for smaller screens */
+  margin-top: 10px; /* Add space between input and button */
+  background-color: rgb(9, 163, 9);
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
+  padding: 10px 20px; /* Adjust padding for better clickability */
+  text-decoration: none;
+  border-radius: 20px;
+  color: aliceblue;
+  cursor: pointer;
+  border: none;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* Reduce gap for smaller screens */
+  align-items: flex-start;
+  justify-content: center; /* Center content horizontally */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin-top: 20px;
+}
+
+.tagline {
+  text-align: center; /* Center text for smaller screens */
+  margin: 0; /* Reset margins for smaller screens */
+}
+
+.tagline h2 {
+  font-size: 2rem; /* Adjust font size for responsiveness */
+}
+
+.nav {
+  display: flex;
+  justify-content: center; /* Align navigation items horizontally */
+  list-style: none; /* Remove default list styles */
+  padding: 0;
+  margin: 10px 0;
+}
+
+.nav-item {
+  margin: 0 10px; /* Adjust spacing for smaller screens */
+}
+
+.nav-link {
+  color: black !important;
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+.text-center {
+  margin-top: 10px;
+  font-size: 0.9rem; /* Adjust font size for better readability */
+  color: black !important;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer h1 {
+    font-size: 1.8rem; /* Smaller font for heading */
+  }
+
+  .footer input {
+    width: 90%; /* Full width for smaller screens */
+    padding: 8px 10px; /* Smaller padding */
+  }
+
+  .footer button {
+    padding: 8px 15px; /* Adjust padding */
+    font-size: 0.9rem; /* Smaller text */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Smaller gap between sections */
+    align-items: center; /* Center all items */
+  }
+
+  .tagline h2 {
+    font-size: 1.5rem; /* Smaller font size for tagline */
+  }
+
+  .nav {
+    flex-direction: column; /* Stack nav items */
+    gap: 10px; /* Space between items */
+  }
+
+  .nav-item {
+    margin: 0; /* Remove horizontal margin */
+  }
+}

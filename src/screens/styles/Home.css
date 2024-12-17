@@ -1,0 +1,108 @@
+.page-one{
+    margin-top: -20px;
+    background-color: antiquewhite;
+}
+.promotion{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+}
+.promotion-txt{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 50%;
+}
+.promotion-txt h2{
+    
+    font-size: 450%;
+    color: rgb(9, 163, 9);
+}
+.promotion-txt span{
+    
+    color:black;
+}
+.promotion-img img{
+    margin-left: -25%;
+    width: 130%;
+}
+.btns{
+    margin-top:  40px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.btns button{
+
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.order-now{
+    background-color: rgb(255, 94, 0);
+    box-shadow: 0 4px 6px rgba(204, 116, 43, 0.651);
+    border: navajowhite;
+    margin-bottom: 20px;
+}
+.offers{
+    background-color: transparent;
+    border: 2px solid  rgb(9, 163, 9);
+    color:  rgb(9, 163, 9);
+}
+.menu-container{
+   
+}
+.category-name{
+    border-radius: 20px;
+    padding: 10px 10px ;
+    margin-left: 5%;
+    width: 10%;
+    color: aliceblue;
+    margin-top: 5%;
+    background-color: rgb(255, 94, 0);
+    box-shadow: 0 9px 16px rgba(204, 116, 43, 0.651);
+    border: navajowhite;
+    margin-bottom: 20px;
+}
+.best-delivered{
+   margin-left: 11%;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    gap: 10% !important;
+}
+.regular-menu-tagline{
+    margin-top: 5%;
+}
+@media screen and (max-width: 450px){
+    .page-one{
+        
+    }
+    .promotion-txt{
+        margin-top: 15%;
+        width: 100vw;
+        font-size: 25%;
+    }
+    .promotion-img img{
+       margin-left: 0%;
+       margin-top: 17%;
+       width: 90%;
+    }
+    .btns{
+     margin-top: 10px;
+        width: 62%;
+        margin-bottom: 20%;
+       
+    }
+    .btns button {
+        margin-bottom: 10px;
+        font-size: 255% !important;
+        padding: 10px 10px !important;
+    }
+    .bD-tagline{
+        font-size: 150% !important ;
+    }
+    .category-name{
+        width: 50%;
+    }
+}

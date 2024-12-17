@@ -1,0 +1,301 @@
+.main-container{
+    display: flex;
+    margin-top: 1%;
+    margin-left: 5%;
+   
+}
+.nav-list{
+    display: flex;
+}
+ul {
+    display: flex;
+    align-items: center;
+    margin-left: 75%;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 6%;
+    font-size: 120%;
+    margin-top: 10%;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: rgb(0, 121, 0);
+    text-decoration: underline;
+}
+
+ul li:hover {
+    transform: scale(1.1); /* Scale the item on hover */
+}
+
+.Go{
+    color: red;
+}
+.title{
+    margin-top: 1.5%;
+    color: rgb(9, 163, 9);
+    font-size: 290%;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.login-and-account {
+    position: absolute; /* Positioning it relative to the nearest positioned ancestor */
+    top: 15px;             /* Aligning it to the top */
+    right: 10%;
+             /* Aligning it to the right */
+    display: flex;      /* Optional: For alignment of child elements */
+    gap: 10px;          /* Optional: Adding space between buttons/links */
+    padding: 10px; 
+    
+    font-size: 120%;
+    margin-top: .6%;    
+}
+.authentication-btn a {
+    background-color:  rgb(9, 163, 9);
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    color: aliceblue;  
+    margin-right: 10px; /* Adds space to the right of each link */
+}
+
+.authentication-btn a:last-child {
+    margin-right: 0; /* Removes extra space after the last link */
+}
+
+/* Alternatively, you can use flexbox for equal spacing: */
+.authentication-btn {
+    display: flex;
+    gap: 10px; /* Defines uniform spacing between links */
+}
+.search-input{
+    background-color: transparent;
+    outline: none;
+    border-radius: 20px;
+    color: black;
+   padding: 2px 6px;
+   border: navy;
+    /*  border: .1px solid  rgb(9, 163, 9);  */
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+   
+}
+.search-input::placeholder {
+    color: green;
+    opacity: 0.8;
+}
+.cart-logout{
+    display: flex;
+    gap: 10px; 
+}
+.cart{
+    background-color:  rgb(9, 163, 9);
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    color: aliceblue;  
+    margin-right: 10px;  
+    cursor: pointer;
+}
+.logout{
+    cursor: pointer;
+    color:    rgb(9, 163, 9);
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    background-color :rgb(198, 255, 222);  
+    margin-right: 10px;  
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    background-color: #333; /* Matches your existing theme */
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+
+/* Responsive Menu Styling */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white; /* Adjust background if needed */
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-list.open {
+        display: flex;
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .login-and-account {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    background-color: #333; /* Matches your existing theme */
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease; /* Smooth transition for span changes */
+}
+
+.hamburger:hover span {
+    background-color: rgb(255, 94, 0); /* Highlight effect on hover */
+}
+
+/* Responsive Menu Styling */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.842); /* Adjust background if needed */
+        width: 70vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        opacity: 0; /* Start hidden */
+        transform: translateY(-10px); /* Slight upward offset */
+        transition: all 0.3s ease; /* Smooth slide-in effect */
+    }
+
+    .nav-list.open {
+        display: flex;
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Reset offset */
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+        gap: 15px;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .login-and-account {
+        flex-direction: column;
+        gap: 15px;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .nav-list ul li {
+        list-style: none;
+        padding: 8px 15px;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-list ul li:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+    }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 450px){
+    .main-container{
+        margin-top: 5%;
+    }
+    .title{
+        font-size: 170%;
+        position: absolute;
+    }
+    .login-and-account{
+        margin-top: -2%;
+        font-size: 70%;
+    }
+    ul{
+        margin-top: 12%;
+        margin-left: -9%;
+    }
+    ul li{
+        font-size: 98%;
+    }
+}
+@media screen and (min-width:1500px) and (max-width: 1700px){
+    
+    ul{
+        margin-left: 35%;
+    }
+}
+@media screen and (min-width:1300px) and (max-width: 1400px){
+    
+    ul{
+        margin-left: 1%;
+    }
+}
