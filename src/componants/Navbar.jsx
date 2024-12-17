@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+
 import Badge from 'react-bootstrap/Badge';
 import { useState } from "react";
 import Model from "../Model";
