@@ -1,4 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    object-fit: fill;
+}
 .page-one{
+    height: 90vh;
     margin-top: -20px;
     background-color: antiquewhite;
 }
@@ -23,7 +29,8 @@
     color:black;
 }
 .promotion-img img{
-    margin-left: -25%;
+   margin-top: 5% !important;
+     margin-left: -22% !important;
     width: 130%;
 }
 .btns{
@@ -51,8 +58,10 @@
 }
 .menu-container{
    
+    
 }
 .category-name{
+ 
     border-radius: 20px;
     padding: 10px 10px ;
     margin-left: 5%;
@@ -76,19 +85,29 @@
 }
 @media screen and (max-width: 450px){
     .page-one{
-        
+        height: 45vh;
+       
     }
     .promotion-txt{
-        margin-top: 15%;
+       
+        margin-top: 18%;
         width: 100vw;
-        font-size: 25%;
+        font-size: 33%;
+        margin-left: 15px;
+        
+    }
+    .promotion-txt button {
+        
+        width: 30vw;
+       
     }
     .promotion-img img{
-       margin-left: 0%;
-       margin-top: 17%;
-       width: 90%;
+       margin-left: -12%;
+       margin-top: 32% !important;
+       width: 120%;
     }
     .btns{
+        
      margin-top: 10px;
         width: 62%;
         margin-bottom: 20%;

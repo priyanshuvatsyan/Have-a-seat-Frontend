@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import './styles/SignUp.css'
+import React from 'react'
 
 export default function SignUp() {
   const [credentials, setcredentials] = useState({ name: "", email: "", password: "", geolocation: "" });

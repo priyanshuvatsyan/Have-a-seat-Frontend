@@ -1,6 +1,7 @@
 import { useCart, useDispatchCart } from "../componants/ContextReducer";
 import { useState } from "react";
-import './styles/Cart.css'
+import './styles/Cart.css';
+import React from "react";
 
 export default function Cart() {
 
@@ -12,8 +13,8 @@ export default function Cart() {
 
     if (data.length === 0) {
         return (
-            <div className="container text-center my-5">
-                <h3 className="text-muted">The Cart is empty</h3>
+            <div className="cart-empty-container">
+                <h3 className="cart-empty-text">The Cart is empty</h3>
             </div>
         );
     }
@@ -42,10 +43,10 @@ export default function Cart() {
     let totalPrice = data.reduce((total, food) => total + food.price, 0);
 
     return (
-        <div className="container my-5">
-            <h2>Your Cart</h2>
-            <div className="table-responsive">
-                <table className="table table-dark table-striped table-hover align-middle">
+        <div className="cart-container">
+            <h2 className="cart-title">Your Cart</h2>
+            <div className="cart-table-container">
+                <table className="cart-table">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -66,7 +67,7 @@ export default function Cart() {
                                 <td>₹{food.price}</td>
                                 <td>
                                     <button
-                                        className="btn btn-danger btn-sm"
+                                        className="cart-delete-button"
                                         onClick={() => dispatch({ type: "REMOVE", index: index })}
                                     >
                                         Delete
@@ -78,40 +79,38 @@ export default function Cart() {
                 </table>
             </div>
 
-            <div className="form-check mt-4">
+            <div className="cart-preorder">
                 <input
                     type="checkbox"
-                    className="form-check-input"
                     id="preOrderCheck"
                     onChange={(e) => setisPreOrder(e.target.checked)}
                 />
-                <label className="form-check-label" htmlFor="preOrderCheck">
+                <label htmlFor="preOrderCheck" className="preorder-label">
                     Is this a pre-order?
                 </label>
             </div>
 
             {isPreOrder && (
-                <div className="mt-3">
-                    <label htmlFor="preOrderTime" className="form-label">
+                <div className="preorder-time-container">
+                    <label htmlFor="preOrderTime" className="preorder-time-label">
                         Select Pre-Order Time:
                     </label>
                     <input
                         type="time"
                         id="preOrderTime"
-                        className="form-control"
+                        className="preorder-time-input"
                         value={preOrderTime}
                         onChange={(e) => setpreOrderTime(e.target.value)}
                     />
                 </div>
             )}
 
-            <div className="d-flex justify-content-between align-items-center mt-4">
-                <h3>Total Price: ₹{totalPrice}/-</h3>
-                <button className="btn btn-success btn-lg" onClick={handleCheckOut}>
+            <div className="cart-footer">
+                <h3 className="total-price">Total Price: ₹{totalPrice}/-</h3>
+                <button className="checkout-button" onClick={handleCheckOut}>
                     Check Out
                 </button>
             </div>
         </div>
-
-  );
+    );
 }

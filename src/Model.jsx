@@ -1,10 +1,12 @@
 import ReactDom from 'react-dom'
+import React from 'react'
+
  // creating a popup window for cart
 const MODAL_STYLES =  {
     position: 'fixed',
     top: '50%',
     left: '50%',
-    backgroundColor: 'rgb(34,34,34)',
+    backgroundColor: 'rgba(255, 255, 255, 0)',
     transform: 'translate(-50%, -50%)',
     zIndex: 1000,
     height: '90%',
