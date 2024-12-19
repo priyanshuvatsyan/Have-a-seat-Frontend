@@ -21,24 +21,64 @@ export default function Cart() {
 
     const handleCheckOut = async () => {
         let userEmail = localStorage.getItem("userEmail");
-        let response = await fetch("http://localhost:5000/api/orderData", {
-            method: 'POST',
+    
+        // Step 1: Create a payment order
+        const response = await fetch("http://localhost:5000/api/createOrder", {
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-                order_data: data,
-                email: userEmail,
-                order_date: new Date().toDateString(),
-                isPreOrder: Boolean(isPreOrder),
-                preOrderTime,
-            }),
+            body: JSON.stringify({ amount: totalPrice }), // Pass the total amount
         });
-
-        if (response.status === 200) {
-            dispatch({ type: "DROP" });
+    
+        const { success, order } = await response.json();
+    
+        if (success) {
+            // Step 2: Open Razorpay interface
+            const options = {
+                key: "rzp_test_nFf0JdxnLRziKM", // Replace with your Razorpay Key ID
+                amount: order.amount,
+                currency: order.currency,
+                name: "Have a Seat",
+                description: "Complete your order",
+                order_id: order.id, // Razorpay Order ID
+                handler: async function (response) {
+                    // Step 3: After successful payment
+                    const paymentData = {
+                        order_id: order.id,
+                        razorpay_payment_id: response.razorpay_payment_id,
+                        razorpay_signature: response.razorpay_signature,
+                    };
+    
+                    // Save payment info in backend
+                    await fetch("http://localhost:5000/api/orderData", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            order_data: data,
+                            email: userEmail,
+                            order_date: new Date().toDateString(),
+                            isPreOrder: Boolean(isPreOrder),
+                            preOrderTime,
+                            paymentData,
+                        }),
+                    });
+    
+                    dispatch({ type: "DROP" }); // Clear cart
+                    alert("Payment Successful! Order placed.");
+                },
+                prefill: {
+                    email: userEmail,
+                },
+            };
+    
+            const paymentObject = new window.Razorpay(options);
+            paymentObject.open();
+        } else {
+            alert("Failed to initiate payment.");
         }
     };
+    
 
     let totalPrice = data.reduce((total, food) => total + food.price, 0);
 
