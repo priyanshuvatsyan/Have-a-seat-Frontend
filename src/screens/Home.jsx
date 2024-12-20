@@ -15,7 +15,7 @@ export default function Home() {
 
   const loadData = async () => {
     try {
-      let response = await fetch("http://localhost:5000/api/foodData", {
+      let response = await fetch("https://haveaseat-u32rj7rd.b4a.run//api/foodData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export default function Home() {
 
   const loadBestDelivered = async ()=>{
     try {
-      let response = await fetch("http://localhost:5000/api/bestDelivered",{
+      let response = await fetch("https://haveaseat-u32rj7rd.b4a.run//api/bestDelivered",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
