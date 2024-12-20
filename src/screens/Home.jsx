@@ -74,7 +74,7 @@ export default function Home() {
         </div>
         </div>
         <div className="promotion-img">
-    <img src="/src/screens/images/thaali.webp" alt="" />
+        <img src="/public/thaali.webp" alt="" />
         </div>
       </div>
       </div>
