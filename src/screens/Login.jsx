@@ -36,7 +36,7 @@ export default function Login() {
   return (
     <div className="container">
       <div className="bg-img" >
-        <img src="/src/screens/images/burger.jpg" alt="img" />
+        <img src="/burger.jpg" alt="img" />
       </div>
 
       <div className="content">

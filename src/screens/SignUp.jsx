@@ -33,7 +33,7 @@ export default function SignUp() {
 
       <div className="container">
       <div className="bg-img" >
-        <img src="/src/screens/images/salad.jpg" alt="img" />
+        <img src="/salad.jpg" alt="img" />
       </div>
       <div className="content">
         <form className="login-form" onSubmit={handleSubmit}>
