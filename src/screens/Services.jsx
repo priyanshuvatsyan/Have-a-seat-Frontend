@@ -11,7 +11,7 @@ export default function Services() {
 
                 <header className="hero">
                     <h1 className="hero-title">
-                        SIMPLE <img src="/src/screens/images/salad.jpg" alt="" /> AND <br /> <span>TASTY</span> RECIPES
+                        SIMPLE <img src="/salad.jpg" alt="" /> AND <br /> <span>TASTY</span> RECIPES
                          </h1>
                     <p className="hero-subtitle">Redefining dining experiences with innovation</p> 
                 </header>
@@ -21,7 +21,7 @@ export default function Services() {
                 <div className="services-container">
                     <div className="service-card">
                         <img
-                            src="/src/screens/images/scan.png"
+                            src="/scan.png"
                             alt="QR Code Feature"
                             className="service-image"
                         />
@@ -33,7 +33,7 @@ export default function Services() {
 
                     <div className="service-card">
                         <img
-                            src="/src/screens/images/delivery-man.png"
+                            src="/delivery-man.png"
                             alt="Pre-order Feature"
                             className="service-image"
                         />
@@ -45,7 +45,7 @@ export default function Services() {
 
                     <div className="service-card">
                         <img
-                            src="/src/screens/images/mobile-payment.png"
+                            src="/mobile-payment.png"
                             alt="Online Payment"
                             className="service-image"
                         />
