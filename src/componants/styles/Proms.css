@@ -1,0 +1,63 @@
+.proms-container{
+    display: flex;
+   
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+.left img{
+    border-radius: 20px;
+    width: 90%;
+    height: 90%;
+   border-radius: 10px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    
+}
+.one{
+    
+    margin-bottom: -5%;
+}
+.one img{
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+}
+.two img{
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+}
+@media (max-width: 768px) {
+    .proms-container {
+        width: 98%;
+        margin-left: 20px !important;
+       display: flex;
+
+       flex-direction: no-wrap !important;
+    }
+
+     .one img, .two img {
+        
+        width: 85%;
+        height: auto;
+    }
+    .left img{
+       
+        width: 105%;
+        height: auto;
+    }
+  
+
+    .right {
+        margin-top: 5px;
+    }
+
+    .one {
+        
+        margin-bottom: 0;
+    }
+}

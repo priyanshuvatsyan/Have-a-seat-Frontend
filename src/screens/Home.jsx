@@ -6,6 +6,7 @@ import './styles/Home.css'
 import FloatingFeatures from "../componants/FloatingFeatures";
 import BestDelivered from "../componants/BestDelivered";
 import React from 'react';
+import Proms from "../componants/Proms";
 
 export default function Home() {
   const [foodCat, setfoodCat] = useState([]); // Data from backend
@@ -119,6 +120,9 @@ export default function Home() {
           <div>Loading...</div>
         )}
       </div> 
+      <div className="proms">
+        <Proms/>
+      </div>
       <Footer />
     </div>
   );
